@@ -1,34 +1,121 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
 
-## Getting Started
 
-First, run the development server:
+---
+
+# 🌍 Location Assistant Extension
+
+A **Chrome Extension** that helps users **navigate from a start point to a destination**, visualize recommended routes (shortest distance), and track their current location in real-time.
+It’s designed for **new movers, travelers, and daily commuters** who want quick, location-aware guidance inside the browser.
+
+---
+
+## 🚀 Features
+
+* 📍 **Location Tracking** – Access and display user’s current location.
+* 🧭 **Direction Assistant** – Show routes between two points.
+* ⚡ **Shortest Path Suggestion** – Get optimized paths for navigation.
+* 💬 **AI-Powered Tips**  – Integrate with **ChatGPT API** for real-time recommendations.
+* 🎨 **Modern UI** – Built with **Tailwind CSS** for a clean and responsive interface.
+* 🔒 **Privacy-Friendly** – Only stores necessary data locally, no unwanted tracking.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Framework:** [Plasmo](https://www.plasmo.com/) (for Chrome Extension dev)
+* **UI:** [Tailwind CSS](https://tailwindcss.com/)
+* **Maps & Location:** Google Maps API / OpenStreetMap
+* **AI Integration:** OpenAI API (optional)
+* **Language:** JavaScript / TypeScript + React
+
+---
+
+## 📂 Project Structure
+
+```
+location-assistant-extension/
+│── extension/          # Final Chrome extension build
+│── src/                # React components & pages
+│   ├── popup/          # Extension popup UI
+│   ├── options/        # Settings page
+│   └── background/     # Background service worker
+│── public/             # Icons & assets
+│── package.json
+│── README.md
+│── tailwind.config.js
+│── manifest.json       # Chrome extension manifest (v3)
+```
+
+---
+
+## ⚡ Installation & Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/bayedhaf/location-assistant-extension.git
+cd location-assistant-extension
+```
+
+### 2. Install dependencies
+
+```bash
+pnpm install
+```
+
+### 3. Run in development
 
 ```bash
 pnpm dev
-# or
-npm run dev
 ```
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
-
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
-
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
+### 4. Build for Chrome
 
 ```bash
 pnpm build
-# or
-npm run build
 ```
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+### 5. Load into Chrome
 
-## Submit to the webstores
+1. Open **chrome://extensions/**
+2. Enable **Developer Mode**
+3. Click **Load unpacked**
+4. Select the `/build` or `/extension` folder
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
-# location-assistant-extension
+---
+
+## ⚙️ Configuration
+
+* **Maps API Key:** Add your Google Maps or OpenStreetMap key in `.env`
+
+```env
+NEXT_PUBLIC_MAPS_API_KEY=your_api_key_here
+```
+
+* **OpenAI API Key:**
+
+```env
+OPENAI_API_KEY=your_api_key_here
+```
+
+---
+
+## 📸 Screenshots
+
+<img width="1366" height="768" alt="chro" src="https://github.com/user-attachments/assets/72376a87-beb0-4642-91d0-c9376f87cb57" />
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, open an issue first to discuss what you’d like to add.
+
+---
+
+## 📜 License
+
+MIT License © 2025 Bayisa
+
+---
+
+
